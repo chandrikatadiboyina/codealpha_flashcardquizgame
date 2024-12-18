@@ -1,0 +1,56 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Fitness Tracker</h1>
+        <!-- Goal Section -->
+        <div id="goal-section">
+            <h2>Set Your Fitness Goal</h2>
+            <input type="text" id="goal-input" placeholder="Enter your fitness goal">
+            <button onclick="setGoal()">Set Goal</button>
+            <p id="goal-display"></p>
+        </div>
+        
+        <!-- Workout Section -->
+        <div id="workout-section">
+            <h2>Add a Workout</h2>
+            <select id="exercise-type">
+                <option value="Cardio">Cardio</option>
+                <option value="Strength Training">Strength Training</option>
+                <option value="Flexibility">Flexibility</option>
+                <option value="HIIT">HIIT</option>
+            </select>
+            <input type="text" id="exercise-name" placeholder="Exercise Name">
+            <input type="number" id="duration" placeholder="Duration (minutes)">
+            <input type="number" id="calories" placeholder="Calories Burned">
+            <button onclick="addWorkout()">Add Workout</button>
+        </div>
+
+        <!-- Progress Section -->
+        <div id="progress-section">
+            <h2>Your Workouts</h2>
+            <ul id="workout-list"></ul>
+            <p id="total-stats"></p>
+        </div>
+
+        <!-- Lightbox Section -->
+        <div id="lightbox" class="hidden">
+            <div class="lightbox-content">
+                <span class="close-btn" onclick="closeLightbox()">&times;</span>
+                <h2>Workout Details</h2>
+                <p id="lightbox-details"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
